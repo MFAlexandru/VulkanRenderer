@@ -160,6 +160,7 @@
     <ClCompile Include="glTFSmallLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SwapChain.cpp" />
+    <ClCompile Include="Texture2D.cpp" />
     <ClCompile Include="ValidationLayers.cpp" />
     <ClCompile Include="VulkanRenderer.cpp" />
   </ItemGroup>

@@ -223,8 +223,7 @@ public:
 	int currentFrame;
 	bool framebufferResized = false;
 
-private:
-	// ----- FUNCTIONS -----
+	// ----- AUXILIAR FUNCTIONS -----
 	std::vector<const char*> getRequiredExtensions();
 
 	bool checkValidationLayerSupport();

@@ -1,11 +1,11 @@
 #pragma once
 
-#include <vulkan/vulkan.hpp>
+#include "VulkanRenderer.h"
 
 class Texture2D
 {
 public:
-	vk::Device* device;
+	VulkanRenderer* renderer;
 	vk::Image               image;
 	vk::ImageLayout         imageLayout;
 	vk::DeviceMemory        deviceMemory;
@@ -16,14 +16,12 @@ public:
 	vk::DescriptorImageInfo descriptor;
 	vk::Sampler             sampler;
 
-	void      updateDescriptor();
-	void      destroy();
+	void updateDescriptor();
+	void destroy();
 
 	void loadFromFile(
 		std::string        filename,
 		vk::Format           format,
-		vk::Device* device,
-		vk::Queue            copyQueue,
 		vk::ImageUsageFlags  imageUsageFlags = vk::ImageUsageFlagBits::eSampled,
 		vk::ImageLayout      imageLayout = vk::ImageLayout::eShaderReadOnlyOptimal,
 		bool               forceLinear = false);
