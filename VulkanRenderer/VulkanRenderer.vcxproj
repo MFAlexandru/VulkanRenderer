@@ -142,7 +142,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Alex\Desktop\tinyobjloader;C:\Users\Alex\Desktop\stb;C:\VulkanSDK\1.2.148.1\Include;C:\Users\Alex\Desktop\GLFW\glfw-3.3.2.bin.WIN64\include;C:\Users\Alex\Desktop\GLM\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alex\Desktop\tinyobjloader;C:\Users\Alex\Desktop\stb;C:\VulkanSDK\1.2.148.1\Include;C:\Users\Alex\Desktop\GLFW\glfw-3.3.2.bin.WIN64\include;C:\Users\Alex\Desktop\GLM\glm-0.9.9.8;C:\Users\Alex\Desktop\tinygltf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,12 +157,14 @@
   <ItemGroup>
     <ClCompile Include="AuxiliarFunctions.cpp" />
     <ClCompile Include="Cleanup.cpp" />
+    <ClCompile Include="glTFSmallLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SwapChain.cpp" />
     <ClCompile Include="ValidationLayers.cpp" />
     <ClCompile Include="VulkanRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Texture2D.h" />
     <ClInclude Include="VulkanRenderer.h" />
     <ClInclude Include="VulkanRendererNeededBuildTypes.h" />
   </ItemGroup>

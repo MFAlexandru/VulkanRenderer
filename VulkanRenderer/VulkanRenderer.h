@@ -171,7 +171,7 @@ public:
 		device->waitIdle();
 	}
 
-private:
+
 	// ----- VARIABLES -----
 
 	GLFWwindow* window;
@@ -223,6 +223,7 @@ private:
 	int currentFrame;
 	bool framebufferResized = false;
 
+private:
 	// ----- FUNCTIONS -----
 	std::vector<const char*> getRequiredExtensions();
 
