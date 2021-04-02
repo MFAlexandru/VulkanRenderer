@@ -16,13 +16,21 @@ public:
 	vk::DescriptorImageInfo descriptor;
 	vk::Sampler             sampler;
 
-	void updateDescriptor();
+	void updateDescriptor(vk::ImageLayout layout);
 	void destroy();
 
 	void loadFromFile(
 		std::string        filename,
 		vk::Format           format,
 		vk::ImageUsageFlags  imageUsageFlags = vk::ImageUsageFlagBits::eSampled,
-		vk::ImageLayout      imageLayout = vk::ImageLayout::eShaderReadOnlyOptimal,
-		bool               forceLinear = false);
+		vk::ImageLayout      imageLayout = vk::ImageLayout::eShaderReadOnlyOptimal);
+
+	void loadFromBuffer(
+		unsigned char* buffer,
+		int bufferSize,
+		int width,
+		int height,
+		vk::Format           format,
+		vk::ImageUsageFlags  imageUsageFlags = vk::ImageUsageFlagBits::eSampled,
+		vk::ImageLayout      imageLayout = vk::ImageLayout::eShaderReadOnlyOptimal);
 };
